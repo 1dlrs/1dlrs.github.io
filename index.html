@@ -123,7 +123,48 @@
         padding: 8px 12px;
         font-size: 14px;
       }
-    }
+
+         /* POPUP */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Background blur */
+.modal.active {
+  display: block;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.4);
+}
+
+/* Box popup */
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Tombol close */
+.close-btn {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
   </style>
 </head>
 <body>
